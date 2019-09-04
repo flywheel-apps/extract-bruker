@@ -1,0 +1,28 @@
+{
+	"name": "extract-bruker",
+	"label": "Bruker ParaVision Metadata Extractor",
+	"description": "Extract Bruker ParaVision header information from subject, acqp and method files",
+	"version": "0.1.0",
+	"flywheel": "0",
+	"inputs": {
+		"bruker_file": {
+			"base": "file",
+			"description": "Bruker PraraVision file (subject|acqp|method|*.pvN.zip)",
+			"type": {"enum": ["text", "archive", "ParaVision"]}
+		}
+	},
+	"config": {},
+	"author": "Ambrus Simon",
+	"maintainer": "Ambrus Simon",
+	"license": "MIT",
+	"source": "https://github.com/flywheel-apps/extract-bruker",
+	"url": "https://github.com/flywheel-apps/extract-bruker",
+	"command": "python extract_bruker.py",
+	"custom": {
+		"docker-image": "flywheel-apps/extract-bruker:0.1.0",
+		"gear-builder": {
+			"category": "converter",
+			"image": "flywheel-apps/extract-bruker:0.1.0"
+		}
+	}
+}
